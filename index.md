@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Structure Based Hate Speech Detection
 
-You can use the [editor on GitHub](https://github.com/kitkat77/hatespeechdetection.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### Hate Speech
+Hate speech is a kind of writing that disparages and is likely to cause harm or danger to the victim. It is a kind of speech that demonstrates a clear intention to be hurtful, to incite harm, or to promote hatred.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### Why automated hate speech detection?
+While manual checking for such comments exists on social media, manual checking can never match to the speed of generation of comments on these sites and hence an automated solution is required.
 
-### Markdown
+## Dataset
+Used a data-set with a corpus of tweets predominantly having offensive language. It consists of a total of 24783 tweets. The data-set is skewed as there are relatively lesser number of data points under the hate-speech category.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Our Approach
+We use more than the traditional Machine Learning and Deep Learning techniques that use bag of words featurizer. We use models that utilize the grammatical structure of a sentence. 
 
-```markdown
-Syntax highlighted code block
+### Dataset Preprocessing 
+Convert tweet to lower case, remove 'RT' from retweets, remove special characters and URLs.
 
-# Header 1
-## Header 2
-### Header 3
+### Models
 
-- Bulleted
-- List
+#### Baseline Models
+- SVM
+- Logistic Regression
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kitkat77/hatespeechdetection.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### LSTM Models
+- LSTM Model
+- Tree LSTM
