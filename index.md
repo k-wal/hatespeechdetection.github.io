@@ -1,6 +1,6 @@
 # Structure Based Hate Speech Detection
 
-### Hate Speech
+## Hate Speech
 Hate speech is a kind of writing that disparages and is likely to cause harm or danger to the victim. It is a kind of speech that demonstrates a clear intention to be hurtful, to incite harm, or to promote hatred.
 
 <b>Why automated hate speech detection?</b>
