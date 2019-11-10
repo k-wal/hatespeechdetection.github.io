@@ -1,9 +1,9 @@
-## Structure Based Hate Speech Detection
+# Structure Based Hate Speech Detection
 
 ### Hate Speech
 Hate speech is a kind of writing that disparages and is likely to cause harm or danger to the victim. It is a kind of speech that demonstrates a clear intention to be hurtful, to incite harm, or to promote hatred.
 
-#### Why automated hate speech detection?
+**Why automated hate speech detection?**
 While manual checking for such comments exists on social media, manual checking can never match to the speed of generation of comments on these sites and hence an automated solution is required.
 
 ## Dataset
@@ -33,29 +33,29 @@ We trained Gensim Word2Vec model on our twitter corpus and later used the model 
 Following are the evaluation metrics :
 <br/>
 <b> SVM </b>
-- Accuracy : 0.814
-- Precision : 0.815
-- Recall : 0.815
-- F1 Score : 0.815
++ Accuracy : 0.814
++ Precision : 0.815
++ Recall : 0.815
++ F1 Score : 0.815
 
 <b> Logistic Regression </b>
-- Accuracy : 0.839
-- Precision : 0.843
-- Recall : 0.843
-- F1 Score : 0.843
++ Accuracy : 0.839
++ Precision : 0.843
++ Recall : 0.843
++ F1 Score : 0.843
 
 #### LSTM Models
 Simple LSTM model in principle does capture the structure of the sentence, but does not incorporate the structural dependencies presnet in the sentence explicitely. Tree LSTM captures the grammatical structural of a sentence better.
 Following are the evaluation metrics :
 <br/>
 <b> Simple LSTM Model </b>
-- Accuracy : 0.874
-- Precision : 0.861
-- Recall : 0.861
-- F1 Score : 0.861
++ Accuracy : 0.874
++ Precision : 0.861
++ Recall : 0.861
++ F1 Score : 0.861
 
 <b> Tree LSTM Model </b>
-- Accuracy : 
-- Precision : 
-- Recall : 
-- F1 Score : 
++ Accuracy : 
++ Precision : 
++ Recall : 
++ F1 Score : 
