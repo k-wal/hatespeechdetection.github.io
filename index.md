@@ -23,8 +23,10 @@ Following is the distribution of different classes in the Twitter dataset:
 ## Our Approach
 We use more than the traditional Machine Learning and Deep Learning techniques that use bag of words featurizer. We use models that utilize the grammatical structure of a sentence. 
 Models omitting the structural semantics of a sentence give an increasing number of false positives. This can be understood by the following example:
-1) Humans are not Ni*gers. `Not Hatespeech`
-2) Ni*gers are not humans. `Hatespeech`
+<br/>
+1) Humans are not Ni\*gers. `Not Hatespeech`
+2) Ni\*gers are not humans. `Hatespeech`
+<br/>
 Our code can be found [here](https://github.com/yp201/structure-based-hate-speech-detection).
 
 ### Dataset Preprocessing 
