@@ -7,7 +7,17 @@ Hate speech is a kind of writing that disparages and is likely to cause harm or 
 While manual checking for such comments exists on social media, manual checking can never match to the speed of generation of comments on these sites and hence an automated solution is required.
 
 ## Dataset
-Used a data-set with a corpus of tweets predominantly having offensive language. It consists of a total of 24783 tweets. The data-set is skewed as there are relatively lesser number of data points under the hate-speech category.
+We used a data-set with a corpus of tweets predominantly having offensive language that can be found [here](https://raw.githubusercontent.com/t-davidson/hate-speech-and-offensive-language/master/data/labeled_data.csv?fbclid=IwAR2h6bXVZA4Zh1EVkeGi5fhbnHChqeXxDRL2SCSix8v0SLdD2jhWTAKAz1U). It consists of a total of 24783 tweets. The data-set is skewed as there are relatively lesser number of data points under the hate-speech category.
+
+Following is the distribution of different classes in the Twitter dataset:
+
+|Type         |Count  |
+|:-----------:|:-----:|
+|Hate Speech  |1430   |
+|Offensive    |19190  |
+|Neither      |4163   |
+|Total        |24783  |
+
 
 ## Our Approach
 We use more than the traditional Machine Learning and Deep Learning techniques that use bag of words featurizer. We use models that utilize the grammatical structure of a sentence. 
@@ -15,12 +25,37 @@ We use more than the traditional Machine Learning and Deep Learning techniques t
 ### Dataset Preprocessing 
 Convert tweet to lower case, remove 'RT' from retweets, remove special characters and URLs.
 
-### Models
+### Models and Results
+We implemented SVM and Logistic Regression as baseline models and a simple LSTM and a tree LSTM to capture the structure of sentences.
 
 #### Baseline Models
-- SVM
-- Logistic Regression
+We trained Gensim Word2Vec model on our twitter corpus and later used the model to obtain word vectors.
+Following are the evaluation metrics :
+<br/>
+<b> SVM </b>
+- Accuracy : 0.814
+- Precision : 0.815
+- Recall : 0.815
+- F1 Score : 0.815
+
+<b> Logistic Regression </b>
+- Accuracy : 0.839
+- Precision : 0.843
+- Recall : 0.843
+- F1 Score : 0.843
 
 #### LSTM Models
-- LSTM Model
-- Tree LSTM
+Simple LSTM model in principle does capture the structure of the sentence, but does not incorporate the structural dependencies presnet in the sentence explicitely. Tree LSTM captures the grammatical structural of a sentence better.
+Following are the evaluation metrics :
+<br/>
+<b> Simple LSTM Model </b>
+- Accuracy : 0.874
+- Precision : 0.861
+- Recall : 0.861
+- F1 Score : 0.861
+
+<b> Tree LSTM Model </b>
+- Accuracy : 
+- Precision : 
+- Recall : 
+- F1 Score : 
