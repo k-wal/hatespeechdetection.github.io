@@ -31,6 +31,7 @@ We implemented SVM and Logistic Regression as baseline models and a simple LSTM 
 #### Baseline Models
 We trained Gensim Word2Vec model on our twitter corpus and later used the model to obtain word vectors.
 Following are the evaluation metrics :
+
 <br/>
 <b> SVM </b>
 + Accuracy : 0.814
@@ -47,6 +48,7 @@ Following are the evaluation metrics :
 #### LSTM Models
 Simple LSTM model in principle does capture the structure of the sentence, but does not incorporate the structural dependencies presnet in the sentence explicitely. Tree LSTM captures the grammatical structural of a sentence better.
 Following are the evaluation metrics :
+
 <br/>
 <b> Simple LSTM Model </b>
 + Accuracy : 0.874
