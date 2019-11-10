@@ -4,7 +4,7 @@
 Hate speech is a kind of writing that disparages and is likely to cause harm or danger to the victim. It is a kind of speech that demonstrates a clear intention to be hurtful, to incite harm, or to promote hatred.
 
 <b>Why automated hate speech detection?</b>
-</br>
+<br/>
 While manual checking for such comments exists on social media, manual checking can never match to the speed of generation of comments on these sites and hence an automated solution is required.
 
 ## Dataset
@@ -22,9 +22,18 @@ Following is the distribution of different classes in the Twitter dataset:
 
 ## Our Approach
 We use more than the traditional Machine Learning and Deep Learning techniques that use bag of words featurizer. We use models that utilize the grammatical structure of a sentence. 
+Models omitting the structural semantics of a sentence give an increasing number of false positives. This can be understood by the following example:
+1) Humans are not Ni*gers. `Not Hatespeech`
+2) Ni*gers are not humans. `Hatespeech`
+Our code can be found [here](https://github.com/yp201/structure-based-hate-speech-detection).
 
 ### Dataset Preprocessing 
-Convert tweet to lower case, remove 'RT' from retweets, remove special characters and URLs.
+To use the tweets, we had to clean them:
+- Convert tweet to lower case
+- Remove 'RT' from every tweet (Keyword that identifies whether a tweet is re-tweet) 
+- Remove special characters that don't contribute positively to accuracy (ex hashtags)
+- Remove URLs
+
 
 ### Models and Results
 We implemented SVM and Logistic Regression as baseline models and a simple LSTM and a tree LSTM to capture the structure of sentences.
