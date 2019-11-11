@@ -56,6 +56,15 @@ Following are the evaluation metrics :
 + Recall : 0.843
 + F1 Score : 0.843
 
+#### Structured Self-Attentive Sentence Embedding
+We used a model for extracting an interpretable sentence embedding by using self-attention. Instead of using a vector, we use a 2-D matrix to represent the embedding.
+
+Following are the evaluation metrics:
++ Accuracy : 0.885
++ Precision : 0.885
++ Recall : 0.885
++ F1 Score : 0.885
+
 #### LSTM Models
 Simple LSTM model in principle does capture the structure of the sentence, but does not incorporate the structural dependencies presnet in the sentence explicitely. 
 We also have implemented a Child-Sum Tree-LSTM model on the dependency tree of the sentence, which is better than the Simple LSTM model at preserving semantic information as it incorporates information from multiple child units.
@@ -73,15 +82,6 @@ Following are the evaluation metrics :
 + Precision : 0.920
 + Recall : 0.920
 + F1 Score : 0.920
-
-#### Structured Self-Attentive Sentence Embedding
-We used a model for extracting an interpretable sentence embedding by using self-attention. Instead of using a vector, we use a 2-D matrix to represent the embedding.
-
-Following are the evaluation metrics:
-+ Accuracy : 0.885
-+ Precision : 0.885
-+ Recall : 0.885
-+ F1 Score : 0.885
 
 ## Conclusion
 Tree-LSTM model gave the best results.
