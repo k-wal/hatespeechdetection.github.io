@@ -78,8 +78,6 @@ Following are the evaluation metrics :
 We used a model for extracting an interpretable sentence embedding by using self-attention. Instead of using a vector, we use a 2-D matrix to represent the embedding.
 
 Following are the evaluation metrics:
-
-<br/>
 + Accuracy :
 + Precision :
 + Recall :
