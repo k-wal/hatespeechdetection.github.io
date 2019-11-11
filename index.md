@@ -37,7 +37,7 @@ To use the tweets, we had to clean them:
 
 
 ### Models and Results
-We implemented SVM and Logistic Regression as baseline models and a simple LSTM and a tree LSTM to capture the structure of sentences.
+We implemented SVM and Logistic Regression as baseline models and a simple LSTM and a tree LSTM to capture the structure of sentences. We also implemented a model based on structured self-attention to extract interpretable sentence embedding.
 
 #### Baseline Models
 We trained Gensim Word2Vec model on our twitter corpus and later used the model to obtain word vectors.
@@ -57,7 +57,8 @@ Following are the evaluation metrics :
 + F1 Score : 0.843
 
 #### LSTM Models
-Simple LSTM model in principle does capture the structure of the sentence, but does not incorporate the structural dependencies presnet in the sentence explicitely. Tree LSTM captures the grammatical structural of a sentence better.
+Simple LSTM model in principle does capture the structure of the sentence, but does not incorporate the structural dependencies presnet in the sentence explicitely. 
+We also have implemented a Child-Sum Tree-LSTM model on the dependency tree of the sentence, which is better than the Simple LSTM model at preserving semantic information as it incorporates information from multiple child units.
 Following are the evaluation metrics :
 
 <br/>
@@ -68,7 +69,18 @@ Following are the evaluation metrics :
 + F1 Score : 0.861
 
 <b> Tree LSTM Model </b>
-+ Accuracy : 
-+ Precision : 
-+ Recall : 
-+ F1 Score : 
++ Accuracy : 0.920
++ Precision : 0.920
++ Recall : 0.920
++ F1 Score : 0.920
+
+#### Structures Self-Attentive Sentence Embedding
+We used a model for extracting an interpretable sentence embedding by using self-attention. Instead of using a vector, we use a 2-D matrix to represent the embedding.
+
+Following are the evaluation metrics:
+
+<br/>
++ Accuracy :
++ Precision :
++ Recall :
++ F1 Score :
