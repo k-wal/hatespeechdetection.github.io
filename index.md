@@ -89,4 +89,4 @@ Tree-LSTM model gave the best results.
 ## Demo Video
 Following is the video to show the steps to run the code:
 <br/>
-[![Link to Video](https://i.ibb.co/cchmM2J/https-i-ytimg-com-vi-m-DUc-VCk-Gt-Uc-maxresdefault.jpg)](https://www.youtube.com/watch?v=mDUcVCkGtUc "")
+[![Link to video](https://i.ibb.co/cchmM2J/https-i-ytimg-com-vi-m-DUc-VCk-Gt-Uc-maxresdefault.jpg)](https://youtu.be/mDUcVCkGtUc "")
